@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    font-size: 62, 5%;
+    --Tomato: #ff6257;
+    --Dark-Slate-Grey: #242742;
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    background: var(--Dark-Slate-Grey);
+    color: var(--Charcoal-Grey);
+}
+
+.hover-box-shadow:hover {
+    box-shadow: 0 1px 7px 0 rgb(236 72 153), 0 1px 7px 0 rgb(239 68 68), 0 1px 7px 0 rgb(234 179 8);
+}

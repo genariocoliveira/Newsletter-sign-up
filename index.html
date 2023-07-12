@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+
+<body>
+  <main class="w-full min-h-screen flex justify-center md:items-center">
+    <div class="w-[850px] bg-white md:p-5 md:rounded md:rounded-3xl md:flex ">
+      <div class="flex md:justify-end justify-center md:order-2">
+        <picture>
+          <source media="(max-width: 768px)" srcset="assets/images/illustration-sign-up-mobile.svg">
+          <img class="md:h-[500px] bg-cover bg-center" src="assets/images/illustration-sign-up-desktop.svg" alt="Card"
+            style="width:auto;">
+        </picture>
+      </div>
+      <div class="flex-1 p-4 md:p-8">
+        <h1 class="text-[2rem] font-bold mt-5">Stay updated!</h1>
+        <p class="my-5">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul>
+          <li class="flex items-start my-2">
+            <img class="mr-4" src="assets/images/icon-list.svg" alt="">
+            <p>
+              Product discovery and building what matters
+            </p>
+          </li>
+          <li class="flex items-start my-2">
+            <img class="mr-4" src="assets/images/icon-list.svg" alt="">
+            <p>
+              Measuring to ensure updates are a success
+            </p>
+          </li>
+          <li class="flex items-start my-2">
+            <img class="mr-4" src="assets/images/icon-list.svg" alt="">
+            <p>
+              And much more!
+            </p>
+          </li>
+        </ul>
+        <form class="mt-5">
+          <div class="flex justify-between">
+            <label class="font-semibold text-[.7rem]" for="YourMail">Email address</label>
+            <span id="validMail" class="font-semibold hidden text-[.7rem] text-[#ff6257]">Valid email required</span>
+          </div>
+          <input type="email"
+            class="block py-4 px-2 w-full rounded rounded-xl border border-gray-500/50"
+            placeholder="email@company.com" id="YourMail" />
+          <button
+            class="p-4 mt-5 rounded-xl font-semibold text-[.8rem] bg-[#242742] text-white w-full hover:bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 transition ease-in-out duration-300 hover-box-shadow"
+            id="btnSubscribe">Subscribe to monthly newsletter</button>
+        </form>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div class="md:bg-[#242742] bg-white hidden w-full min-h-screen flex justify-center items-center" id="myModal">
+      <div class="bg-white md:rounded-3xl p-4 md:p-10 w-[375px]">
+        <img src="assets/images/icon-success.svg" alt="">
+        <h1 class="text-[2rem] font-bold mt-8 mb-4">Thanks for subscribing!</h1>
+        <p class="text-[.9rem]">
+          A confirmation email has been sent to <span id="mailResult" class="font-bold"></span>.
+          Please open it and click the button inside to confirm your subscription.
+        </p>
+        <button
+          class="p-4 mt-14 rounded-xl font-semibold text-[.8rem] bg-[#242742] text-white w-full hover:bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 transition ease-in-out duration-300 hover-box-shadow"
+          onclick="dismissMessage()">Dismiss message</button>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+
+</html>
